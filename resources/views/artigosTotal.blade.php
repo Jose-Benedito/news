@@ -5,6 +5,7 @@
 @section('content')
 
 <div class="container col-lg-10 col-sm-4">
+
 @foreach($artigos as $artigo )
   <div class="card">
       <div class="card-body col-lg-10 col-sm-4">
@@ -19,8 +20,7 @@
   
 @endforeach 
 
-
- 
+ {{ $artigos->links() }}
   </div>
-  </div>
+  
   @endsection

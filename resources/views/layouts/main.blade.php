@@ -37,7 +37,7 @@
                 <a class="nav-link active" href="/galeria">Redação-fotos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/artigos">Artigos</a>
+                <a class="nav-link" href="/artigosTotal">Artigos</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/podcasts">Podcasts</a>

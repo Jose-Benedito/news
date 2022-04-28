@@ -70,13 +70,20 @@ class PaginasController extends Controller
       return view('postagens', ['titulo'=>$titulo, 'noticias' => $noticias]);
  
   }
-  public function artigos($id=null){
-    $arts = Artigo::all()->where('id', $id);// trazendo os últimos dados da TABELA Artigo;
-    $artigos = Artigo:: latest()->simplePaginate(1); 
-      $titulo = "Artigos";
-      return view('artigos', ['titulo'=>$titulo, 'arts'=>$arts, 'artigos'=>$artigos]);
+  public function artigosId($id=null){
+    $artigos = Artigo::all()->where('id', $id);// trazendo os últimos dados da TABELA Artigo;
+   // $artigos = Artigo:: latest()->simplePaginate(1); 
+      $titulo = "Página do Artigo";
+      return view('artigos', ['titulo'=>$titulo, 'artigos'=>$artigos]);
  
   }
+  public function artigosTotal(){
+    
+    $artigos = Artigo::latest()->simplePaginate(2); 
+      $titulo = "Artigos";
+      return view('artigosTotal', ['titulo'=>$titulo, 'artigos'=>$artigos]);
+ 
+  } 
   public function store(Request $request){
       $post = new Noticia;
 

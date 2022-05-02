@@ -12,10 +12,13 @@
 
     <!-- Fonte do Google -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
-
+   
+    <!-- Sommernote -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 
     <!-- css da aplicação -->
     <link href="/css/styles.css" rel="stylesheet">
+    <script src="/js/script.js"></script>
 
 </head>
 
@@ -57,6 +60,28 @@
     </div>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+        
+        <!-- Sommernote -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+                <script>
+                    $(document).ready(function() {
+                        $('#body').summernote({
+                            tabsize: 2,
+                             height: 400
+                        });
+     
+                    });
+                </script>
+
+        <script>
+            $(document).ready(function() {
+                $('#description').summernote({
+                    tabsize: 2,
+                     height: 400
+                });
+            });
+        </script>
         <footer class="footer">
             <p class="text-center">BENETHOWEN &copy; 2022</p>
         </footer>

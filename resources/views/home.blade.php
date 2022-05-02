@@ -11,7 +11,7 @@
 
 <!-- Postagens -->
 
-<div class="container col-lg-10 col-sm-4">
+<div class="container col-md-10 col-sm-4">
   @foreach($manchetes as $manchete )
   <div class="card" style="width:95% ; margin-bottom:20px;">
     <a href="postagens/{{ $manchete->id}}">
@@ -54,9 +54,9 @@
           @endforeach   
     </div>
   <div class="card" style="width:95%; margin-top:20px; ">
+    <div class="card-body ">
+      <img src="/image/escrita2.jpg"  style="width: 70%; height: 10rem;  padding:5px;" class="card-img-top" alt="escrita2">
       <a href="podcasts">
-        <div class="card-body ">
-       <img src="/image/escrita2.jpg"  style="width: 70%; height: 10rem;  padding:5px;" class="card-img-top" alt="escrita2">
           <h1 class="card-title">PedraNews tem Podcast</h1>   
         </div>
       </a>           

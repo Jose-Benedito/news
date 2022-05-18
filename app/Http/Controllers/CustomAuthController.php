@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use Hash;
 
 class CustomAuthController extends Controller
 {
@@ -24,7 +26,19 @@ class CustomAuthController extends Controller
             'email'=>'required | email |unique:users',
             'password'=>'required | min:5 | max:12'
         ]);
-        
+        $user = new User();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password);
+
+        $res = $user->save();
+        if($res){
+            return back()->with('success', "Registro realizado!");
+
+        }else{
+            return back()->with('fail', 'Algo deu errado!');
+
+        }
 
     }
     

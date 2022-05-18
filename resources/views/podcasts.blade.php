@@ -21,6 +21,9 @@
           <p>Postado: {{ $mp3->data_post }}</p>
       </div>
       @endforeach 
+      <div class="embed-responsive embed-responsive-3by4 d-flex justify-content-center">
+              <iframe  class="embed-responsive-item w-100 m-3 " src= "/storage/{{ $mp3->audio }}" allowfullscreen></iframe>
+      </div>
         
     </div>
   

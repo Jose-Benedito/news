@@ -10,16 +10,46 @@ use App\Models\Podcast; //carregando a model de podcasts
 class PaginasController extends Controller
 
 {
+    
+    
+    
     public function index() {
 
-        $arts = Artigo:: latest()->simplePaginate(2);
+    
+    $contador = "reg.txt";
+
+    define("adi", 1);
+
+    $id = fopen($contador, "r+");
+    $conteudo = fread($id, filesize($contador));
+    fclose($id);
+
+    clearstatcache();
+
+    $conteudo += adi;
+
+    $id = fopen($contador, "r+");
+    fwrite($id, $conteudo, strlen($conteudo) + 5);
+
+    fclose($id);
+
+    clearstatcache();
+
+    
+
+        $arts = Artigo:: latest()->simplePaginate(1);
         $noticias = Noticia::latest()->simplePaginate(12); // trazendo os últimos dados da TABELA Artigo;
         $manchetes = Noticia::first()->simplePaginate(1);
         $titulo = "Pedra News";
-        return view('home', ['titulo'=>$titulo, 'noticias'=>$noticias, 'manchetes'=>$manchetes, 'arts'=>$arts]);
+        return view('home', ['titulo'=>$titulo,
+         'noticias'=>$noticias,
+          'manchetes'=>$manchetes, 
+          'arts'=>$arts,
+        'conteudo'=>$conteudo]);
 
 
     }
+  
     public function sobre(){
         $nome = "João Carlos";
         $idade = 34;

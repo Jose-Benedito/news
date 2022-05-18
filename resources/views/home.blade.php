@@ -12,6 +12,7 @@
 <!-- Postagens -->
 
 <div class="container col-md-10 col-sm-4">
+<h5 align="right">Visitante nª: {{ $conteudo }} </h5> 
   @foreach($manchetes as $manchete )
   <div class="card" style="width:95% ; margin-bottom:20px;">
     <a href="postagens/{{ $manchete->id}}">
@@ -29,7 +30,7 @@
              <div class="card">
            <img src="storage/{{ $noticia->image}}" style="height: 10rem;"class="card-img-top" alt="escrita2">
            <a href="postagens/{{ $noticia->id }}"> <div class="card-body">
-                <h5 class="card-title">{{ $noticia->title }}</h5>
+                <h5 class="card-title" id="texto">{{ $noticia->title }}</h5>
               
        
               </div>

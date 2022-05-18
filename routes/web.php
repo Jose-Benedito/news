@@ -3,9 +3,12 @@
 use Illuminate\Support\Facades\Route;
 
 // Importanção da classe controler
+use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\PaginasController;
 
 Route::get('/', [PaginasController::class, 'index']);
+Route::get('/login', [CustomAuthController::class, 'login']);
+Route::get('/registration', [CustomAuthController::class, 'registration']);
 Route::get('/sobre', [PaginasController::class, 'sobre']);
 Route::get('/postagem', [PaginasController::class, 'postagem']);
 Route::get('/manchete', [PaginasController::class, 'manchete']);

@@ -6,9 +6,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\PaginasController;
 
-Route::get('/', [PaginasController::class, 'index']);
 Route::get('/login', [CustomAuthController::class, 'login']);
 Route::get('/registration', [CustomAuthController::class, 'registration']);
+Route::post('/register-user', [CustomAuthController::class, 'registerUser'])->name('register-user');
+Route::get('/login-user', [CustomAuthController::class, 'loginUser'])->name('login-user');
+
+
+
+Route::get('/', [PaginasController::class, 'index']);
 Route::get('/sobre', [PaginasController::class, 'sobre']);
 Route::get('/postagem', [PaginasController::class, 'postagem']);
 Route::get('/manchete', [PaginasController::class, 'manchete']);

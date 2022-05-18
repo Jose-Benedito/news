@@ -26,7 +26,7 @@ class CustomAuthController extends Controller
         if($user){
             if(Hash::check($request->password, $user->password)){
                 $request->session()->put('loginId', $user->id);
-                return redirect('postagem');
+                return redirect('dashboard');
             }else{
                 return back()->with('fail', 'Senha não corresponde');  
             }
@@ -57,6 +57,10 @@ class CustomAuthController extends Controller
 
         }
 
+    }
+    public function dashboard(){
+
+        return view("dashboard");
     }
     
 

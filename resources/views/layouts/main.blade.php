@@ -49,6 +49,9 @@
                 <a class="nav-link" href="/sobre">Sobre</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="/login">Editor-coordenação</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link active" target="blank" href="https://www.facebook.com/ejardimpedrabranca/?ref=page_internal">Facebook</a>
             </li>
             </ul>

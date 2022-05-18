@@ -17,7 +17,24 @@ class CustomAuthController extends Controller
 
     }
     public function loginUser(Request $request){
-        
+        $request->validate([
+            'email'=>'required',
+            'password'=>'required | min:5 | max:12'
+        ]); 
+        $user = new User();
+        $user = User::where('email','=',$request->email)->first();
+        if($user){
+            if(Hash::check($request->password, $user->password)){
+                $request->session()->put('loginId', $user->id);
+                return redirect('postagem');
+            }else{
+                return back()->with('fail', 'Senha não corresponde');  
+            }
+
+        }else{
+            return back()->with('fail', 'Este email não está registrado');
+
+        }
 
     }
     public function registerUser(Request $request){

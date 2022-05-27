@@ -17,7 +17,7 @@
   <div class="card" style="width:95% ; margin-bottom:20px;">
     <a href="postagens/{{ $manchete->id}}">
       <div class="card-body ">
-        <h1 class="card-title">{{ $manchete->title }}</h1> 
+        <h1 class="card-title" id="titulo">{{ $manchete->title }}</h1> 
         <img src="storage/{{ $manchete->image}}"  style="width: 90%; height: 12rem;  padding:5px;" class="card-img-top" alt="escrita2">
         <p></p> 
       </div>
@@ -29,7 +29,7 @@
     <div class="col-lg-2 col-sm-4 noticia">
              <div class="card">
            <img src="storage/{{ $noticia->image}}" style="height: 10rem;"class="card-img-top" alt="escrita2">
-           <a href="postagens/{{ $noticia->id }}"> <div class="card-body">
+           <a  href="postagens/{{ $noticia->id }}"> <div class="card-body">
                 <h5 class="card-title" id="texto">{{ $noticia->title }}</h5>
               
        

@@ -11,7 +11,7 @@
 
         <div class="col-lg-3 ">
             <figure class="figure">
-            <img src="/storage/{{ $slide->image }}" style="height: 200px;" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <img class="foto" onclick="aumentaImagem();"src="/storage/{{ $slide->image }}" style="height: 200px;" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
             <figcaption class="figure-caption">{{ $slide->description }}</figcaption>
             </figure>
         </div>

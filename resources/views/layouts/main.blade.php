@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <div class="container-fluid ">
+    <div class="container ">
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark  justify-content-center">
                 <a class="navbar-brand" href="/">PedraNews</a>
@@ -32,29 +32,41 @@
                 </button>
 
             </nav>
-    <div class="container col-lg-10 col-sm-4">
-                <div class="col-lg-2 py-5 logo">  <a href="/"><h1>PedraNews</h1></a></div>
+    <div class="container col-lg-10 col-sm-8">
+                <div class="col-lg-2 py-5 logo">  <a href="/"><img class="icone" src="/image/pedranews.png" alt=""></a></div>
                 <ul class="nav justify-content-center ">
                     <li class="nav-item">
+                       <a class="nav-link active" href="/galeria">Redação-fotos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/artigosTotal">Artigos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/podcasts">Podcasts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Editor-coordenação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" target="blank" href="https://www.facebook.com/ejardimpedrabranca/?ref=page_internal">Facebook</a>
+                    </li>
+                    <li class="nav-item blogs">
+                        <a class="nav-link active" target="blank" href="#">Blog</a>
+                        <ul>
+                            <li><a href="#">Asfofoqueiras de plantão</a></li>
+                            <li><a href="#">gamesblog</a></li>
+                            <li><a href="#">blog02</a></li>
+                            <li><a href="#">Blog03</a></li>
+                            <li><a href="#">gamesblog</a></li>
+                            <li><a href="#">blog02</a></li>
+                            <li><a href="#">Blog03</a></li>
+                        </ul>
                 
-                <a class="nav-link active" href="/galeria">Redação-fotos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/artigosTotal">Artigos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/podcasts">Podcasts</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/sobre">Sobre</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/login">Editor-coordenação</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" target="blank" href="https://www.facebook.com/ejardimpedrabranca/?ref=page_internal">Facebook</a>
-            </li>
-            </ul>
+                    </li>
+                </ul>
             
         </header>
         <!-- Diretiva do laravel -->
@@ -64,6 +76,9 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
         
+        <!-- Fontawesome -->
+        <script src="https://kit.fontawesome.com/cdd0c2c5dc.js" crossorigin="anonymous"></script>
+       
         <!-- Sommernote -->
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         

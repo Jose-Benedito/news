@@ -1,0 +1,160 @@
+body {
+    margin:0%;
+    padding: 0%;
+}
+.navtop{
+    height: 50px;
+    background-color: #333;
+    
+}
+.navtop a{
+    width: 100px;
+    color: white;
+ 
+    
+}
+.nav-link{
+    color: #333;
+} 
+
+a{
+    
+    text-decoration: none;
+    color: #333;
+}
+a:hover{
+    opacity: 0.5;
+}
+ul li{
+    list-style: none;
+}
+.icone{
+    width: 150px;
+    height: 150px;
+    margin-left: 50px;
+    justify-self: start;
+}
+.fotorreportagem{
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+}
+.foto-manchete{
+    width: 500px;
+    height: 350px;
+}
+.foto-perfil{
+    border-radius: 50%;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+/* Container */
+.estrutura{
+    display: grid;
+    grid-template-columns: minmax(260px,1fr) 3fr 1fr minmax(160px,1fr) 1fr ;
+    grid-template-areas: 
+    "header header header header header "
+    "sidenav materia materia aside aside"
+    "footer footer footer footer footer ";
+}
+
+header{
+    grid-area: header;
+  
+    
+}
+header ul{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    
+
+}
+.top{
+    display: block;
+    height: 50px;
+    background-color: black;
+    text-align: center;
+    
+    
+}
+.top a{
+    color:white;
+    
+}
+nav{
+    border-top: 2px #333 solid;
+    border-bottom: 0.5px #333 solid;
+    margin:20px;
+    
+}
+.btn{
+    display: none;
+}
+.sidenav{
+    grid-area: sidenav;
+    line-height: 3.5em;
+    z-index: 1;
+}
+.sidenav h2{
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.materia{
+    grid-area: materia;
+    margin-top: 20px;
+    padding: 10px;
+ 
+}
+.manchete{
+    display: block;
+}
+.noticias{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 20px;
+}
+.aside{
+    grid-area:aside;
+    margin: 100px 20px 10px;
+    padding:15px;
+    border-left: 1.5px #ceb66a solid;
+    text-align: justify;
+}
+footer{
+    grid-area:footer;
+    height: 120px;
+    background-color: #333;
+    margin-top: 100px;
+}
+footer p{
+    color:white;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width:600px){
+   header{
+        display: block;
+   } 
+   header ul{
+    display: block;
+   }
+   .estrutura{
+    display: block;
+   }
+   .noticias{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   }
+   .sidenav{
+     display: none;
+   }
+   .btn{
+    display: block;
+    
+   }
+}

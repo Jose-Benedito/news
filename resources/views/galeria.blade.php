@@ -3,7 +3,7 @@
 @section('title', 'BTNH- Postagem')
 
 @section('content')
-<div class="container col-lg-10 col-sm-4">
+<div class="container col-lg-12 col-sm-4">
 <div class="row">
     
 <h2 class="text-center m-5">Redação</h2>

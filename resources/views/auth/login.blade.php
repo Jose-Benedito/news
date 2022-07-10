@@ -32,7 +32,7 @@
     <br> 
     <button type="submit" class="btn btn-primary" >Logar</button>
     <br><br>
-    <a href="registration">Novo registro</a>
+    <button class="btn btn-outline-primary"><a href="registration">Cadastra-se</a></button>
 
 </form>
 </div>

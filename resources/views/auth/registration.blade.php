@@ -36,7 +36,7 @@
     <br> 
     <button type="submit" class="btn btn-primary">Registrar</button>
     <br><br>
-    <a href="login">Login</a>
+    <button class="btn btn-outline-success"><a href="login">Login</a></button>
 </form>
 </div>
 

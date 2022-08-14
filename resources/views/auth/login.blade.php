@@ -6,7 +6,7 @@
 
 
 
-<div class="col-md-4 offset-md-3">
+<section>
 <!-- Formulário de notícias -->
 <h2 class="text-center m-5">Login</h2>
 <form action="/login-user" method="POST">
@@ -35,6 +35,6 @@
     <button class="btn btn-outline-primary"><a href="registration">Cadastra-se</a></button>
 
 </form>
-</div>
+</section>
 
 @endsection

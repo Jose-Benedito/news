@@ -12,23 +12,23 @@
 <!-- Postagens -->
 
 
-<section class="materia">
-    <div class="manchete">
+<section>
+    <article>
       <h5> {{ $conteudo }} views </h5> 
 
           @foreach($manchetes as $manchete )
   
                <a href="postagens/{{ $manchete->id}}">
       
-               <h1 class="titulo" id="titulo">{{ $manchete->title }}</h1> 
+               <h1  id="titulo">{{ $manchete->title }}</h1> 
                <img src="storage/{{ $manchete->image}}" class="foto-manchete" alt="escrita2">
         
     
                </a>           
   
           @endforeach
-    </div>
-    <div class="noticias">
+  </article>
+  <article class="noticias">
           @foreach($noticias as $noticia )
                  
                 <img src="storage/{{ $noticia->image}}" class="fotorreportagem" alt="escrita2">
@@ -37,9 +37,10 @@
                 </a>
 
           @endforeach
-    </div>
+  </article>
 </section>
-    <article class="aside">
+
+    <aside>
       <h2>Artigos</h2>
           @foreach($arts as $artigo)
               
@@ -55,7 +56,7 @@
               <h2 class="card-title">Podcast</h2>   
             </a> 
           </div>
-        </article>
+    </aside>
           
           
 

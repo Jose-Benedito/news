@@ -3,14 +3,14 @@
 @section('title', 'BTNH- Postagem')
 
 @section('content')
-<div class="container col-lg-10 col-sm-4">
 
+<section>
 <h2>{{ $titulo }}</h2>
 <img src="/image/desktop-cadastro.jpeg" class="img-fluid mb-5" alt="...">
 @if($busca != '')
     <p>O Usuário está buscando por: {{ $busca }}</p>
 @endif
-<div class="col-md-6 offset-md-3">
+
 <!-- Formulário de notícias -->
 <h2 class="text-center m-5">Postagem de notícias</h2>
 <form action="/posts" method="POST" enctype="multipart/form-data">
@@ -48,10 +48,10 @@
     <input type="submit" class="btn btn-primary" value="Criar post">
 
 </form>
-</div>
+
 <!-- Formulário de artigos -->
 <h2 class="text-center m-5">Postagem de artigos</h2>
-<div class="col-md-6 offset-md-3">
+
 <form action="/posts_art" method="POST">
     @csrf 
     <div class="form-group">
@@ -82,12 +82,11 @@
     <input type="submit" class="btn btn-primary" value="Salvar artigo">
 
 </form>
-</div>
 
 <!-- Formulário de fotos -->
 
 <h2 class="text-center m-5">Postagem de fotos</h2>
-<div class="col-md-6 offset-md-3">
+
 <form action="/posts_foto" method="POST" enctype="multipart/form-data">
     @csrf 
     <div class="form-group">
@@ -113,12 +112,12 @@
     <input type="submit" class="btn btn-primary" value="Salvar foto">
 
 </form>
-</div>
+
 
 <!-- Formulário de Podcasts -->
 
 <h2 class="text-center m-5">Postagem de podcasts</h2>
-<div class="col-md-6 offset-md-3">
+
 <form action="/posts_podcasts" method="POST" enctype="multipart/form-data">
     @csrf 
     <div class="form-group">
@@ -149,8 +148,8 @@
     <input type="submit" class="btn btn-primary" value="Salvar foto">
 
 </form>
-</div>
-</div>
+</section>
+
 <script>
     $(document).ready(function() {
     $('#body').summernote({

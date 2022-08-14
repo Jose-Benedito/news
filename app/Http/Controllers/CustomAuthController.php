@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Hash;
+use App\Models\Artigo; //carregando o model de artigo
+use App\Models\Noticia; //carregando a model de Videoaula
+use App\Models\Foto; //carregando a model de fotos
+use App\Models\Podcast; //carregando a model de podcasts
 
 class CustomAuthController extends Controller
 {
@@ -60,6 +64,7 @@ class CustomAuthController extends Controller
     }
     public function dashboard(){
 
+        $artigos = Artigo::latest()->simplePaginate(2); 
         return view("dashboard");
     }
     

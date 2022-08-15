@@ -64,8 +64,34 @@ class CustomAuthController extends Controller
     }
     public function dashboard(){
 
-        $artigos = Artigo::latest()->simplePaginate(2); 
-        return view("dashboard");
+        $artigos = Artigo::All(); 
+        $noticias = Noticia::All();
+        $podcasts = Podcast::All();
+        $titulo = "dashbord";
+        return view("dashboard" , ['titulo'=>$titulo, 'artigos'=>$artigos, 'noticias'=>$noticias, 'podcasts'=>$podcasts]);
+    }
+    public function editar ($id= null){
+        $artigos = Artigo::all()->where('id', $id);
+        $noticias = Noticia::all()->where('id', $id);
+        $podcasts = Podcast::all()->where('id', $id);
+        $titulo = "Edição";
+        return view ("editar", [ 'titulo'=>$titulo, 'artigos'=>$artigos,'noticias'=>$noticias, 'podcasts'=>$podcasts]);
+    }
+    public function edit_art (Request $request, $id){
+        Artigo::where(['id'=>$id])->update([
+            'id'=>$request->id,
+            'autor'=> $request->autor,
+            'title'=> $request->title,
+            'resumo'=> $request->resumo,
+            'description'=> $request->description,
+            'data_post'=> $request->data_post
+            
+        ]);
+        
+    
+        $msg = "Editado com sucesso";
+    
+        return redirect('dashboard');
     }
     
 

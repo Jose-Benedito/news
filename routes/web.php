@@ -11,6 +11,8 @@ Route::get('/registration', [CustomAuthController::class, 'registration']);
 Route::post('/register-user', [CustomAuthController::class, 'registerUser'])->name('register-user');
 Route::post('/login-user', [CustomAuthController::class, 'loginUser'])->name('login-user');
 Route::get('/dashboard', [CustomAuthController::class, 'dashboard']);
+Route::get('/editar/{id?}', [CustomAuthController::class, 'editar']);
+Route::post('/edit_art/{id?}', [CustomAuthController::class, 'edit_art']);
 
 
 Route::get('/', [PaginasController::class, 'index']);
